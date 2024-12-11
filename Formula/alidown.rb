@@ -1,13 +1,13 @@
 class Alidown < Formula
   desc "A Aliyun Drive Download Tool"
-  homepage "https://github.com/yaojunluo/alidown"
+  homepage "https://github.com/yaojunluo/homebrew-alidown"
   version "0.0.1"
 
   if Hardware::CPU.arm?
-    url "https://github.com/yaojunluo/alidown/releases/download/v0.0.1/alidown_darwin_arm64"
+    url "https://github.com/yaojunluo/homebrew-alidown/releases/download/v0.0.1/alidown_darwin_arm64"
     sha256 "a5106958203b7242557cb9eb6e849c35a93b8aa76f130fd14a70b570e4af2c27"
   else
-    url "https://github.com/yaojunluo/alidown/releases/download/v0.0.1/alidown_darwin_amd64"
+    url "https://github.com/yaojunluo/homebrew-alidown/releases/download/v0.0.1/alidown_darwin_amd64"
     sha256 "2f257a637858d0c52643552b3650695864eb9891bd1e31d75024afe411ccd743"
   end
 
@@ -31,8 +31,8 @@ class Alidown < Formula
 
   # 自动更新下载链接
   if Hardware::CPU.arm?
-    auto_updates url: "https://github.com/yaojunluo/alidown/releases/download/v#{version}/alidown_darwin_arm64"
+    auto_updates url: "https://github.com/yaojunluo/homebrew-alidown/releases/download/v#{version}/alidown_darwin_arm64"
   else
-    auto_updates url: "https://github.com/yaojunluo/alidown/releases/download/v#{version}/alidown_darwin_amd64"
+    auto_updates url: "https://github.com/yaojunluo/homebrew-alidown/releases/download/v#{version}/alidown_darwin_amd64"
   end
 end
