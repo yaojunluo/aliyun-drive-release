@@ -23,16 +23,8 @@ class Alidown < Formula
     system "#{bin}/alidown", "--version"
   end
 
-  # 自动更新配置
   livecheck do
     url :stable
     regex(/^v?(\d+(?:\.\d+)+)$/i)
-  end
-
-  # 自动更新下载链接
-  if Hardware::CPU.arm?
-    auto_updates url: "https://github.com/yaojunluo/homebrew-alidown/releases/download/v#{version}/alidown_darwin_arm64"
-  else
-    auto_updates url: "https://github.com/yaojunluo/homebrew-alidown/releases/download/v#{version}/alidown_darwin_amd64"
   end
 end
